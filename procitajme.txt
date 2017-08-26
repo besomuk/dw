@@ -1,0 +1,17 @@
+1. "Ulazna tacka" je index.php, u root-u, koji poziva fajlove u kojima su kontroleri na osnovu parametara u URL. Pravi imena fajlova i poziva metode u tim kontrolerima. Sav saobracaj se vrsi odavde, svi linkovi vode ovde, fajlovima je nemoguce pristupiti direktno. Ukoliko parametar nije zadat, postavljene su default vrednosti.
+
+2. index.php ucitava 'master' kontroler i model u kojima se nalaze neke opste metoda tipa view () ili konekcija sa bazom. Ostali kontroleri i modeli nasledjuju ova dva.
+
+3. Direktorijum config sadrzi razna podesavanja. Sada su to samo parametri za bazu.
+
+Sta bi trebalo uraditi/izmeniti:
+
+- Napraviti automatsko ucitavanje modela na osnovu njihovog imena, a ne na osnovu imena fajla koji ih sadrzi. Opciono, napraviti mogucnost automatskog ucitavanja modela iz neke liste, koja bi bila definisana u konfiguraciji.
+
+- Konekciju ka bazi ostvariti u 'master modelu', a ne u 'radnom' modelu.
+
+- Pobrinuti se oko bezbednosti podataka koji dolaze iz forme ( ocistiti ulaz )
+
+- View fajlove rasporediti po direktorijumima, radi lakseg snalazenja sta sluzi cemu.
+
+- Bolje iskomentarisati metode 
