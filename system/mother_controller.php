@@ -14,7 +14,7 @@ class MotherController
             
         }
         
-        require_once( $location );
+        require ( $location );
     }
 }
 
